@@ -5,3 +5,28 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+publisher = Publisher.create(
+  name: "Gihyo inc.",
+  address: "Ichigaya"
+)
+
+(1..2).each do |i|
+  publisher.books << Book.create(
+    name: "Book #{i}",
+    published_on: Time.current,
+    price: i * 1000
+  )
+end
+
+matz = Author.create(name: "Matsumoto Yukihiro", penname: "Mats" )
+dhh = Author.create(name: "David Heinemeiner Hansson", penname: "DHH" )
+
+matz.books << Book.find(1)
+matz.books << Book.find(2)
+
+book = Book.find(1)
+book.authors << dhh
+
+
+

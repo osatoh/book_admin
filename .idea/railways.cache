@@ -1,0 +1,18 @@
+         Prefix Verb   URI Pattern                   Controller#Action
+   profile_show GET    /profile/show(.:format)       profile#show
+   profile_edit GET    /profile/edit(.:format)       profile#edit
+ profile_update GET    /profile/update(.:format)     profile#update
+           book GET    /books/:id(.:format)          books#show
+                DELETE /books/:id(.:format)          books#destroy
+publisher_index GET    /publisher(.:format)          publisher#index
+                POST   /publisher(.:format)          publisher#create
+  new_publisher GET    /publisher/new(.:format)      publisher#new
+ edit_publisher GET    /publisher/:id/edit(.:format) publisher#edit
+      publisher GET    /publisher/:id(.:format)      publisher#show
+                PATCH  /publisher/:id(.:format)      publisher#update
+                PUT    /publisher/:id(.:format)      publisher#update
+                DELETE /publisher/:id(.:format)      publisher#destroy
+   edit_profile GET    /profile/edit(.:format)       profiles#edit
+        profile GET    /profile(.:format)            profiles#show
+                PATCH  /profile(.:format)            profiles#update
+                PUT    /profile(.:format)            profiles#update
